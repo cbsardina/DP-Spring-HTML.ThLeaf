@@ -11,7 +11,7 @@ public class StudentController {
 
     @RequestMapping(path = "/new_student", method = RequestMethod.GET)
     public String newStudent(Model model) {
-        model.addAttribute("grades", Grade.values());
+        model.addAttribute("Grades", Grade.values());
         /* call the method on the Grade enum to get all the grades */
         return "new_student";
         //TODO: #1: Flesh out the ||@RequestMapping("/new_student")|| route.

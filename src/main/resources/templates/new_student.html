@@ -24,9 +24,9 @@
                 <td>Grade:</td>
                 <td>
                     <select name="grade">
-                        <option th:each="grade: ${grades}"
+                        <option th:each="grade: ${Grades}"
                                 th:value="${grade}"
-                                th:text="#{${'student.grade' + grade}}">Grade</option>
+                                th:text="${grade}">Grade</option>
                         <!-- thymeleaf option tag, add all grades added in the controller. PROBABLY HAVE OT FIX THIS-->
                     </select>
                 </td>
