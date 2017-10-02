@@ -5,6 +5,7 @@ public class Student {
     String firstName;
     String lastName;
     Grade grade;
+    boolean enrolled;
 
     public Student() {}
 
@@ -20,12 +21,23 @@ public class Student {
 
     public void setGrade(Grade grade) { this.grade = grade; }
 
+    public String isEnrolled() {
+        if(this.enrolled) {
+            return "Yes";
+        }else return "No";
+    }
+
+    public void setEnrolled(boolean enrolled) {
+        this.enrolled = enrolled;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", grade=" + grade +
+                ", grade=" + grade + '\'' +
+                ", enrolled='" + enrolled +
                 '}';
     }
 }

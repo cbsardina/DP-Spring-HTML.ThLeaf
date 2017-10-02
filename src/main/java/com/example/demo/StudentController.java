@@ -12,25 +12,22 @@ public class StudentController {
     @RequestMapping(path = "/new_student", method = RequestMethod.GET)
     public String newStudent(Model model) {
         model.addAttribute("Grades", Grade.values());
-        /* call the method on the Grade enum to get all the grades */
+
         return "new_student";
-        //TODO: #1: Flesh out the ||@RequestMapping("/new_student")|| route.
     }
 
     @RequestMapping(path = "/create_student", method = RequestMethod.POST)
-    public String createStudent(@RequestParam(value="first_name") String firstName, @RequestParam(value ="last_name") String lastName, @RequestParam(value ="grade") Grade grade, Model model) {
+    public String createStudent(@RequestParam(value="first_name") String firstName, @RequestParam(value ="last_name") String lastName,                                              @RequestParam(value ="grade") Grade grade, @RequestParam(value ="enrolled") boolean enrolled, Model model) {
         Student student = new Student();
             student.setFirstName(firstName);
             student.setLastName(lastName);
             student.setGrade(grade);
+            student.setEnrolled(enrolled);
 
             model.addAttribute("firstName", student.firstName);
             model.addAttribute("lastName", student.lastName);
             model.addAttribute("grade", student.grade);
-
-        //TODO: #3:  In the controller class flesh out the @RequestMapping("/create_student") route.
-        /* set student firstName, lastName and grade using the http request parameters */
-        /* add the student to the model that will be used by the view_student html file */
+            model.addAttribute("enrolled", student.isEnrolled());
 
         return "view_student";
     }

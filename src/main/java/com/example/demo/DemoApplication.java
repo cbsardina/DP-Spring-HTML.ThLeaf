@@ -12,5 +12,3 @@ public class DemoApplication {
 
 
 }
-
-//TODO: OVERALL:  For this project you will be showing the properties of a Java object in an HTML page and letting the user update them.
