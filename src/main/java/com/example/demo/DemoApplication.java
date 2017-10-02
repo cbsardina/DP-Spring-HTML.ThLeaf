@@ -10,21 +10,7 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	String firstName;
-	String lastName;
-	Grade grade;
 
-	public DemoApplication() {}
-
-	public String getFirstName() { return firstName; }
-
-	public void setFirstName(String firstName) { this.firstName = firstName; }
-
-	public String getLastName() { return lastName; }
-
-	public void setLastName(String lastName) { this.lastName = lastName; }
-
-	public Grade getGrade() { return grade; }
-
-	public void setGrade(Grade grade) { this.grade = grade; }
 }
+
+//TODO: OVERALL:  For this project you will be showing the properties of a Java object in an HTML page and letting the user update them.
